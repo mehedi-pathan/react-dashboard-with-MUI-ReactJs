@@ -1,72 +1,81 @@
 .navbar {
-    height: 50px;
-    border-bottom: 0.5px solid rgb(231, 228, 228);
+  height: 51px;
+  border-bottom: 0.5px solid rgb(231, 228, 228);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  background-color: #f1faf7;
+
+  .wrapper {
+    width: 100%;
+    padding: 20px;
     display: flex;
     align-items: center;
-    font-size: 14px;
-    color: #555;
+    justify-content: space-between;
 
-    .wrapper {
-        width: 100%;
-        padding: 20px;
+    .search {
+      display: flex;
+      align-items: center;
+      border: 0.5px solid lightgray;
+      padding: 3px;
+
+      input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+      .SearchIcon {
+        cursor: pointer;
+      }
+    }
+
+    .items {
+      display: flex;
+      align-items: center;
+
+      .item {
+        position: relative;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        margin-right: 20px;
+        cursor: pointer;
 
-        .search {
-            display: flex;
-            align-items: center;
-            border: 0.5px solid lightgray;
-            padding: 3px;
-
-            input {
-                border: none;
-                outline: none;
-                background-color: transparent;
-
-                &::placeholder {
-                    font-size: 12px;
-                }
-            }
+        .icon {
+          font-size: 20px;
         }
-        
-        
-        .items {
-            display: flex;
-            align-items: center;
 
-            .item {
-                position: relative;
-                display: flex;
-                align-items: center;
-                margin-right: 20px;
-
-                .icon {
-                    font-size: 20px;
-                }
-
-                .avatar {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                }
-
-                .counter {
-                    width: 15px;
-                    height: 15px;
-                    background-color: red;
-                    border-radius: 50%;
-                    color: white;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 10px;
-                    font-weight: bold;
-                    position: absolute;
-                    top: -5px;
-                    right: -5px;
-                }
-            }
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
         }
+
+        .counter {
+          width: 15px;
+          height: 15px;
+          background-color: red;
+          border-radius: 50%;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          font-weight: bold;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+        }
+        //reset the last child "margin"
+        &:nth-last-child(1) {
+          margin-right: 0;
+        }
+      }
     }
+  }
 }
