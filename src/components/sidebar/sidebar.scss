@@ -2,7 +2,6 @@
   flex: 1;
   border-right: 0.5px solid rgb(231, 228, 228);
   min-height: 100vh;
-  // background-color: white;
   background-color: #f1faf7;
 
   .top {
@@ -37,9 +36,13 @@
         display: flex;
         align-items: center;
         padding: 5px;
+        border-right: 4px solid rgba(255, 255, 255, 0);
         cursor: pointer;
 
-        &:hover {
+        &:hover,
+        &:active {
+          transition: 0.4s all;
+          border-right: 4px solid #64cb9c;
           background-color: #ece8ff;
         }
         .icon {

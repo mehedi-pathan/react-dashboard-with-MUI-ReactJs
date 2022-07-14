@@ -12,6 +12,7 @@
       padding: 10px;
       margin: 20px;
       display: flex;
+      border-radius: 15px;
 
       h1 {
         font-size: 20px;
@@ -56,6 +57,9 @@
               padding: 5px;
               border: none;
               border-bottom: 1px solid gray;
+              &:focus {
+                outline: none;
+              }
             }
           }
 
@@ -63,11 +67,20 @@
             width: 150px;
             padding: 10px;
             border: none;
-            background-color: teal;
+            background-color: #66cc9d;
+            border-radius: 5px;
             color: white;
+            font-size: 16px;
             font-weight: bold;
             cursor: pointer;
             margin-top: 10px;
+
+            &:hover {
+              -webkit-box-shadow: 0px 6px 10px 1px rgb(0 0 0 / 60%);
+              box-shadow: 0px 6px 10px 1px rgb(0 0 0 / 60%);
+              transition: 0.4s ease-in-out;
+              transform: scale(0.9);
+            }
           }
         }
       }
